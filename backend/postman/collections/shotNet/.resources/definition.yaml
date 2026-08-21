@@ -1,0 +1,4 @@
+$kind: collection
+name: shotNet
+variables:
+  endpoint: ""
