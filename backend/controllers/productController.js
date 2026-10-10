@@ -31,7 +31,6 @@ const createProduct = async (req, res) => {
         let imageUrl = '';
         if (req.file) {
             const result = await cloudinary.uploader.upload(req.file.path);
-            console.log(result);
             imageUrl = result.secure_url;
         }
         const product = new Product({
@@ -63,7 +62,6 @@ const updateProduct = async (req, res) => {
             product.stock = stock || product.stock;
             if (req.file) {
                 const result = await cloudinary.uploader.upload(req.file.path);
-                console.log(result);
                 product.imageUrl = result.secure_url;
             }
             const updateProduct = await product.save();

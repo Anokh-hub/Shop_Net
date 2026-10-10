@@ -1,0 +1,50 @@
+$kind: http-request
+description: |-
+  Generated from cURL: curl -X POST http://localhost:5000/api/orders/ \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+    -d '{
+      "items": [
+        {
+          "productId": "YOUR_PRODUCT_ID",
+          "qty": 2,
+          "price": 499
+        }
+      ],
+      "totalAmount": 998,
+      "address": {
+        "fullName": "Jane Doe",
+        "street": "123 Main Street",
+        "city": "Mumbai",
+        "postCode": "400001",
+        "country": "India"
+      },
+      "paymentId": "YOUR_PAYMENT_ID"
+    }'
+url: http://localhost:5000/api/orders/
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_JWT_TOKEN
+body:
+  type: json
+  content: |-
+    {
+        "items": [
+          {
+            "productId": "YOUR_PRODUCT_ID",
+            "qty": 2,
+            "price": 499
+          }
+        ],
+        "totalAmount": 998,
+        "address": {
+          "fullName": "Jane Doe",
+          "street": "123 Main Street",
+          "city": "Mumbai",
+          "postCode": "400001",
+          "country": "India"
+        },
+        "paymentId": "YOUR_PAYMENT_ID"
+      }
+order: 1790953432535

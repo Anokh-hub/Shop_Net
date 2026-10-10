@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get All Products
+url: ""
+method: GET
+order: 5000
